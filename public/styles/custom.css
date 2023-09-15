@@ -1,0 +1,11 @@
+@media screen and (max-width:1000px){
+	.la-grid.la-s-col125{
+		grid-template-columns: repeat(7, 125px);
+	}
+}
+
+@media screen and (min-width:1001px){
+	.la-grid.la-l-col250{
+		grid-template-columns: repeat(7, 250px);
+	}
+}

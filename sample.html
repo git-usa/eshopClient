@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>CSV Line Graph</title>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<h2>CSV Line Graph</h2>
+<input type="file" id="csvFileInput" accept=".csv" onchange="handleFiles(this.files)">
+<div id="chart"></div>
+
+<script>
+	function handleFiles(files){
+		if(files.length){
+			const file    = files[0];
+			const reader  = new FileReader();
+			reader.onload = function(e){
+				const data   = e.target.result;
+				console.info("DATA");
+				console.info(data);
+				const rows   = data.split("\n").map(row => row.split(","));
+				console.info("ROWS");
+				console.info(rows);
+				const xPlots = rows.map(row => row[0]);
+				const yPlots = rows.map(row => row[1]);
+				console.info("XPLOTS");
+				console.info(xPlots)
+				console.info("YPLOTS");
+				console.info(yPlots);
+				drawLineGraph(xPlots, yPlots);
+			};
+			reader.readAsText(file);
+		}
+	}
+	
+	function drawLineGraph(xPlots, yPlots){
+		const trace  = {
+			x    : xPlots,
+			y    : yPlots,
+			type : "scatter"
+		};
+		const layout = {
+			title : "Line Graph",
+			xaxis : {
+				title : "xPlots"
+			},
+			yaxis : {
+				title : "yPlots"
+			}
+		};
+		Plotly.newPlot("chart", [trace], layout);
+	}
+</script>
+</body>
+</html>

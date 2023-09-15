@@ -1,0 +1,24 @@
+.flex-container{
+	display:flex;
+	justify-content:space-between;
+}
+
+.sidebar, .gallery{
+	width:25%;
+}
+
+.slider{
+	width:50%;
+	overflow:hidden; /* Hide images that are outside the slider */
+}
+
+#links, #slides{
+	display:grid; /* Use CSS Grid to position the slides */
+	grid-template-columns: repeat(3, 100%); /* Create a grid with one column per slide */
+	transform:translateX(0); /* Initialize the transform property for sliding effect */
+	transition:transform 0.5s ease-in-out; /* Add transition effect */
+}
+
+.slide{
+	width:100%; /* Make each slide the same width as the slider */
+}

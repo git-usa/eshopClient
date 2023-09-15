@@ -1,0 +1,22 @@
+export const ladyDate : {
+	date : string,
+	weekday : string,
+	monthName : string,
+	day : string,
+	month : string,
+	year : string,
+	hour : string,
+	minute : string,
+	second : string,
+	merid : string,
+	HOUR : string,
+	timeZone : string,
+	htmlInput : string,
+	htmlInputLocal : string,
+	yearFormat : string,
+	dayFormat : string,
+	monthFormat : string,
+	dayMonthFormat : string,
+	time : string,
+	time24 : string
+};

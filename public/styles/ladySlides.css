@@ -1,0 +1,27 @@
+.la-slider{
+	overflow:hidden;
+}
+
+.la-slideBox{
+	display:grid; /* Use CSS Grid to position the slides */
+	grid-template-columns: repeat(3, 100%); /* Create a grid with one column per slide */
+	transform:translateX(0); /* Initialize the transform property for sliding effect */
+	transition:transform 500ms ease-in-out; /* Add transition effect */
+}
+
+.la-slide{
+	/*top:0;
+	left:0;
+	width:100%;
+	!*transition:0.4s;*!
+	z-index:0;
+	overflow:hidden;
+	position:absolute;
+	transition:left 1s ease-in-out;*/
+	width:100%;
+}
+
+.la-setSlide{
+	overflow:auto;
+	transition:all 500ms ease-in-out;
+}

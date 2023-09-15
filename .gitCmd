@@ -1,0 +1,82 @@
+#Steps to Git
+
+.Initialize Git on a folder, making it a Repository
+.Add/Select the files to a Staging Environment
+.Staged files are files that are ready to be committed to the repository you are working on
+.Commit Stage file by including a mandatory message
+.The Staged files are Committed, which prompts Git to store a permanent snapshot of the files
+.Git considers each commit as change/check/save save point
+.It is a point in the project you can go back to if you find a bug, or want to make a change
+.Create Branched as per requirements.
+.Branches allow to work on different parts of a project without impacting the main branch
+.When the work is complete, a branch can be merged with the main project
+.Push the repo to a Git Server
+.Pull the repo from a Git Server to a local repo
+
+#Use global to set the username and e-mail for every repository on your computer.
+#Remove global to set the username and e-mail for the current repo only.
+git config --global user.name "<USER_NAME>"
+git config --global user.email "<USER_EMAIL>"
+
+#Initialize git
+git init
+
+#Check Status
+git status
+git status --short
+#?? untracked File
+#A  new file
+#D  deleted file
+#M  modified file
+
+#Add file to Stage
+git add <FILE_NAME/FILE_PATH>
+
+#Add all files to Stage
+git add --all
+git add -A
+
+#Commit Staged file
+git commit -m "<MESSAGE>"
+
+#Commit Without Stage
+#Recommended only for tiny changes
+git commit -a -m "<MESSAGE>
+
+#View the history of commits for a repository
+git log
+git log --oneline  #Short version of logs
+git log --all #Logs from all branched of local & remote
+git log <BRANCH_NAME> #Logs from a specific branch
+
+#See branches
+git branch
+
+#Add branch
+git branch <BRANCH_NAME>
+
+#Checkout/Move from current branch to a specified branch
+git checkout <BRANCH_NAME>
+
+#Checkout from current branch to a new branch
+git checkout -b <BRANCH_NAME>
+
+#Merge current branch with specified branch
+git merge <BRANCH_NAME>
+
+#Delete branch no longer needed
+git branch -d <BRANCH_NAME>
+
+#Add remote repo as an origin to local repo
+git remote add origin <SERVER_URI>
+
+#Push a specific branch remote app
+git push --set-upstream origin master
+
+#Get all the change history of a tracked branch/repo
+git fetch origin
+git status
+git diff <BRANCH_NAME> #Show the difference between local and remote
+
+#Pull to update local repo
+git pull <BRANCH>

@@ -1,0 +1,12 @@
+.la-side-menu-show{
+	/*display:block;*/
+	width:100%;
+	transition:all 500ms;
+}
+
+.la-side-menu-hide{
+	/*display:none;*/
+	width:0;
+	overflow:hidden;
+	transition:all 500ms;
+}
